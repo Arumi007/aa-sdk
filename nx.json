@@ -1,23 +1,40 @@
 {
   "targetDefaults": {
     "build": {
-      "dependsOn": ["^build", "generate"],
-      "outputs": ["{projectRoot}/dist"],
+      "dependsOn": [
+        "^build",
+        "generate"
+      ],
+      "outputs": [
+        "{projectRoot}/dist"
+      ],
       "cache": true
     },
     "test": {
-      "dependsOn": ["build"],
+      "dependsOn": [
+        "build"
+      ],
       "cache": true
     },
     "generate": {
-      "dependsOn": ["^build"],
-      "outputs": ["{projectRoot}/src/plugins"],
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "{projectRoot}/src/plugins"
+      ],
       "cache": true
     }
   },
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
     "sharedGlobals": [],
-    "production": ["default"]
-  }
+    "production": [
+      "default"
+    ]
+  },
+  "nxCloudAccessToken": "ZDQ2NGQ2YzEtYWI0My00N2Q0LWI5N2YtOWI4ZWEwMDI0YjgyfHJlYWQtd3JpdGU="
 }
